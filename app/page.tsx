@@ -65,11 +65,11 @@ export default function Home() {
           </div>
           
           <div className="mx-4">
-          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-5">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-5 mx-auto">
             Don't wait until it's too late.
           </h1>
 
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 pb-10">
+          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 pb-10 mx-auto">
             Start managing your tasks BEFORE you forget with PreForget. <br/> Currently available on the Mac App Store.
           </p>
           </div>
