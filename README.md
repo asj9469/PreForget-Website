@@ -1,4 +1,4 @@
-# Check out the website [HERE](preforget-website.vercel.app)
+# Check out the website [HERE](https://preforget.vercel.app)
 
 ## Home
 <img src="public/home.png">
