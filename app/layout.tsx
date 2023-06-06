@@ -16,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>PreForget</title>
+      </head>
       <body className={inter.className}>
         {children}
         <Analytics />
