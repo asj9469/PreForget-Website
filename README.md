@@ -1,7 +1,7 @@
 # Check out the website [HERE](preforget-website.vercel.app)
 
 ## Home
-<img src="public/website preview.png">
+<img src="public/home.png">
 
 ## Features - Carousel View
 <img src="public/carousel.gif">
