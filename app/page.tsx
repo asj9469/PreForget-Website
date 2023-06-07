@@ -41,7 +41,7 @@ export default function Home() {
       <div className="z-10 w-full max-w-[100vw] flex items-end justify-end text-sm lg:flex">
       <nav className="mt-16 mr-[10vw] animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
-          <Link key="https://example.com/download" href="https://example.com/download" target="_blank" rel="noopener noreferrer">
+          <Link key="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" href="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" target="_blank" rel="noopener noreferrer">
             Download
           </Link>
           {navigation.map((item) => (
@@ -76,7 +76,7 @@ export default function Home() {
           
           <div className="pb-40 flex flex-col items-center sm:flex-row sm:justify-center sm:space-x-5">
               <a
-                href="https://example.com/download"
+                href="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-opacity-70 bg-white  hover:bg-gray-400 text-black py-3 px-6 rounded-md text-xl sm:text-xl mb-4 sm:mb-0"

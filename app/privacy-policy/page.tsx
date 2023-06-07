@@ -4,7 +4,7 @@ import { PrivacyPolicy, NavContainer, PrivacyPolicyMarginStyle} from "@/componen
 
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "Download", href: "https://example.com/download" },
+    { name: "Download", href: "https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" },
     { name: "Support", href: "/support" },
   ];
 
