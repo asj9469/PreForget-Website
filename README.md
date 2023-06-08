@@ -2,13 +2,13 @@
 # If you like this design, feel free to drop a star :))))
 
 ## Home
-<img src="public/home.png">
+<img src="public/readme-sources/home.png">
 
 ## Features - Carousel View
-<img src="public/carousel.gif">
+<img src="public/readme-sources/carousel.gif">
 
 ## Privacy Policy
-<img src="public/privacy policy.gif">
+<img src="public/readme-sources/privacy policy.gif">
 
 ## Contact Us
-<img src="public/contact us.gif">
+<img src="public/readme-sources/contact us.gif">

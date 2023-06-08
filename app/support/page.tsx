@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import {Main, NavContainer, LeftSupportContainer, RightSupportContainer, SupportContainer, CenterAlignContainer} from "@/components/view";
+import {NavContainer, LeftSupportContainer, RightSupportContainer, SupportContainer, CenterAlignContainer} from "@/components/view";
 import CopyButton from "@/components/CopyButton";
 import { ToastContainer } from 'react-toastify';
 

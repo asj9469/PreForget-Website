@@ -2,12 +2,16 @@ import Image from 'next/image';
 import Link from "next/link";
 import React from "react";
 import Carousel from '@/components/Carousel/Carousel';
+import { BsCircleFill } from 'react-icons/bs';
 
 //import styled components
-import {Features, Main, Title} from "@/components/view";
+import {Features, Main, Title, Demo} from "@/components/view";
+import {CenterAlignContainer2, LeftRightContainerCW, LeftRightContainerCCW, LeftContainer, RightContainer} from "@/components/view";
 
-//import images
-import text_logo from "../public/text_logo.png";
+//import images/gifs
+import text_logo from "../public/images/text_logo.png";
+import add_tasks from "../public/gifs/adding_tasks_cropped.gif";
+import manage_tasks from "../public/gifs/manage_tasks_cropped.gif";
 
 import img1 from "../public/carousel-images/1.jpg";
 import img2 from "../public/carousel-images/2.jpg";
@@ -113,7 +117,67 @@ export default function Home() {
       <Carousel items={imageItems}/>
     </section>
     </Features>
-  
+
+
+    
+    <Demo>
+    <section
+      id="demos"
+      className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24 "
+    >
+      <CenterAlignContainer2>
+        <div className="flex flex-col items-center justify-center my-auto gap-6">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-20 mx-auto text-center">
+            Easily Add Tasks
+          </h1>
+          <LeftRightContainerCW>
+            <LeftContainer>
+              
+              <div className="flex justify-center">
+                <Image src={add_tasks} alt="GIF" style={{width: "95%"}}/>
+              </div>
+                
+            </LeftContainer>
+            <RightContainer>
+            <h1 className="font-heading text-xl sm:text-xl md:text-2xl lg:text-3xl pb-5 text-center">
+                {/* <BsCircleFill className="inline-block align-middle mr-2 text-primary" style={{ fontSize: '0.5rem' }}/> */}
+                Include details for each task <br/><br/>
+                Set reminders for important deadlines
+            </h1>
+            </RightContainer>
+
+            </LeftRightContainerCW>
+
+            </div>
+        </CenterAlignContainer2>
+    </section>
+    </Demo>
+
+    <Demo>
+      <CenterAlignContainer2>
+        <div className="flex flex-col items-center justify-center my-auto gap-6">
+        <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-20 mx-auto text-center">
+            Seamlessly Manage Tasks
+          </h1>
+          <LeftRightContainerCCW>
+            <LeftContainer>
+              <h1 className="font-heading text-xl sm:text-xl md:text-2xl lg:text-3xl pb-5 text-center">
+                Click on task to edit details <br/><br/>Two-finger swipe to delete <br/><br/> Mark as complete with the bullet
+              </h1>
+                
+            </LeftContainer>
+            <RightContainer>
+              <div className="flex justify-center">
+                <Image src={manage_tasks} alt="GIF" style={{width: "95%"}}/>
+              </div>
+              
+            </RightContainer>
+
+          </LeftRightContainerCCW>
+          </div>
+      </CenterAlignContainer2>
+    </Demo>
+
     </Main>
   </div>
   )
