@@ -100,83 +100,70 @@ export default function Home() {
     </section>
     </Title>
 
-
     <Features>
-    <section
-      id="features"
-      className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
-    >
-      <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-        <h1 className="font-heading text-3xl leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl pb-5">
-          Features
-        </h1>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-xl sm:leading-7 pb-10">
-        PreForget stays in your menubar to provide easy access. <br /> Here are some key features of the app: 
-        </p>
-      </div>
-      <Carousel items={imageItems}/>
-    </section>
-    </Features>
+  <section
+    id="features"
+    className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
+  >
+    <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+      <h1 className="font-heading text-3xl leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl pb-5">
+        Features
+      </h1>
+      <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-xl sm:leading-7 pb-10">
+        PreForget stays in your menubar to provide easy access. <br /> Here are some key features of the app:
+      </p>
+    </div>
+    <Carousel items={imageItems} />
+  </section>
+</Features>
 
-
-    
-    <Demo>
-    <section
-      id="demos"
-      className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24 "
-    >
-      <CenterAlignContainer2>
-        <div className="flex flex-col items-center justify-center my-auto gap-6">
-          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-20 mx-auto text-center">
-            Easily Add Tasks
-          </h1>
-          <LeftRightContainerCW>
-            <LeftContainer>
-              
-              <div className="flex justify-center">
-                <Image src={add_tasks} alt="GIF" style={{width: "95%"}}/>
-              </div>
-                
-            </LeftContainer>
-            <RightContainer>
-            <h1 className="font-heading text-xl sm:text-xl md:text-2xl lg:text-3xl pb-5 text-center">
-                {/* <BsCircleFill className="inline-block align-middle mr-2 text-primary" style={{ fontSize: '0.5rem' }}/> */}
-                Include details for each task <br/><br/>
-                Set reminders for important deadlines
-            </h1>
-            </RightContainer>
-
-            </LeftRightContainerCW>
-
-            </div>
-        </CenterAlignContainer2>
-    </section>
-    </Demo>
-
-    <Demo>
-      <CenterAlignContainer2>
-        <div className="flex flex-col items-center justify-center my-auto gap-6">
+<Demo>
+  <section
+    id="demos"
+    className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
+  >
+    <CenterAlignContainer2>
+      <div className="flex flex-col items-center justify-center my-auto gap-6">
         <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-20 mx-auto text-center">
-            Seamlessly Manage Tasks
-          </h1>
-          <LeftRightContainerCCW>
-            <LeftContainer>
-              <h1 className="font-heading text-xl sm:text-xl md:text-2xl lg:text-3xl pb-5 text-center">
-                Click on task to edit details <br/><br/>Two-finger swipe to delete <br/><br/> Mark as complete with the bullet
-              </h1>
-                
-            </LeftContainer>
-            <RightContainer>
-              <div className="flex justify-center">
-                <Image src={manage_tasks} alt="GIF" style={{width: "95%"}}/>
-              </div>
-              
-            </RightContainer>
+          Easily Add Tasks
+        </h1>
+        <LeftRightContainerCW>
+          <LeftContainer>
+            <div className="flex justify-center">
+              <Image src={add_tasks} alt="GIF" style={{ width: "95%" }} />
+            </div>
+          </LeftContainer>
+          <RightContainer>
+            <h1 className="font-heading text-xl sm:text-xl md:text-2xl lg:text-3xl pb-5 text-center">
+              Include details for each task <br /><br />
+              Set reminders for important deadlines
+            </h1>
+          </RightContainer>
+        </LeftRightContainerCW>
 
-          </LeftRightContainerCCW>
-          </div>
-      </CenterAlignContainer2>
-    </Demo>
+        <div className="my-12" />
+
+        <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-20 mx-auto text-center">
+          Seamlessly Manage Tasks
+        </h1>
+        <LeftRightContainerCCW>
+          <LeftContainer>
+            <h1 className="font-heading text-xl sm:text-xl md:text-2xl lg:text-3xl pb-5 text-center">
+              Click on task to edit details <br /><br />Two-finger swipe to delete <br /><br /> Mark as complete with the bullet
+            </h1>
+          </LeftContainer>
+          <RightContainer>
+            <div className="flex justify-center">
+              <Image src={manage_tasks} alt="GIF" style={{ width: "95%" }} />
+            </div>
+          </RightContainer>
+        </LeftRightContainerCCW>
+      </div>
+    </CenterAlignContainer2>
+  </section>
+</Demo>
+
+
 
     </Main>
   </div>
