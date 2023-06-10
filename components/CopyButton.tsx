@@ -8,7 +8,7 @@ export default function CopyButton() {
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopyClick = () => {
-      const textToCopy = 'website9469@gmail.com';
+      const textToCopy = 'preforget@gmail.com';
       navigator.clipboard.writeText(textToCopy)
         .then(() => {
           setIsCopied(true);
@@ -27,7 +27,7 @@ export default function CopyButton() {
             className={"bg-transparent hover:bg-zinc-500 text-white py-3 px-4 rounded-md text-xl sm:text-xl md:text-2xl lg:text-3xl"}
         >
             
-            <span>{isCopied ? 'Copied!' : 'website9469@gmail.com'}</span>
+            <span>{isCopied ? 'Copied!' : 'preforget@gmail.com'}</span>
         </button>
 
         <ToastContainer />
