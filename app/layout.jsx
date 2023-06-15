@@ -59,7 +59,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         
-        <Script data-ad-client="ca-${CA_PUB_NUM}" async 
+        <Script data-ad-client="${CA_PUB_NUM}" async 
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></Script>
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}"></Script>
