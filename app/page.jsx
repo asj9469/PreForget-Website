@@ -1,6 +1,6 @@
 "use client"
 
-
+import CA_PUB_NUM from "@/lib/gtag";
 import Image from 'next/image';
 import Link from "next/link";
 import React, {useEffect} from "react";
@@ -22,6 +22,7 @@ import img6 from "../public/carousel-images/6.jpg";
 import img8 from "../public/carousel-images/8.jpg";
 import img9 from "../public/carousel-images/9.jpg";
 import img10 from "../public/carousel-images/10.jpg";
+
 
 
 const imageItems = [

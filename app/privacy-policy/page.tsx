@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import { PrivacyPolicy, NavContainer, PrivacyPolicyMarginStyle} from "@/components/view";
+import Script from 'next/script';
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -10,6 +11,7 @@ const navigation = [
 
   export default function PrivacyPolicyPage() {
   return (
+         
     <div className="h-screen overflow-y-scroll">
         <NavContainer>
         <div className="z-10 w-full max-w-[100vw] flex items-end justify-end text-sm lg:flex">

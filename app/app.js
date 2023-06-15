@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import * as gtag from "../lib/gtag";
 import RootLayout from "./layout";
+import CA_PUB_NUM from "@/lib/gtag";
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter()
@@ -17,7 +18,14 @@ const App = ({ Component, pageProps }) => {
   }, [router.events])
 
   return (
+    
     <RootLayout>
+      <Script
+        id="adsbygoogle-init"
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+        src= "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CA_PUB_NUM}"
+      />
       <Component {...pageProps} />
     </RootLayout>
   )

@@ -43,8 +43,12 @@ export default function RootLayout({
     <html lang="en">
 
         <head>
-          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CA_PUB_NUM}"
-                  crossorigin="anonymous"></Script>
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src= "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CA_PUB_NUM}"
+        />
         <title>PreForget</title>
         <meta name="title" content={metadata.title} />
         <meta name="description" content={metadata.description} />
