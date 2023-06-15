@@ -43,6 +43,8 @@ export default function RootLayout({
     <html lang="en">
 
         <head>
+          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CA_PUB_NUM}"
+                  crossorigin="anonymous"></Script>
         <title>PreForget</title>
         <meta name="title" content={metadata.title} />
         <meta name="description" content={metadata.description} />
@@ -58,15 +60,9 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Analytics />
-        
-        <Script data-ad-client="${CA_PUB_NUM}" async 
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></Script>
-
+        {/* <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CA_PUB_NUM}"
+                crossorigin="anonymous"></Script> */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}"></Script>
-        {/* <script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          onLoad={handleScriptLoad}
-        /> */}
       </body>
     </html>
   )
