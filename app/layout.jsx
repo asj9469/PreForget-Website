@@ -8,7 +8,7 @@ import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+const metadata = {
   title: 'PreForget',
   description: 'Manage your tasks BEFORE you forget.',
   image: "../public/images/social_preview.jpg",
