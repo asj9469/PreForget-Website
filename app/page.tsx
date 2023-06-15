@@ -1,8 +1,10 @@
+"use client"
+
+
 import Image from 'next/image';
 import Link from "next/link";
-import React from "react";
+import React, {useEffect} from "react";
 import Carousel from '@/components/Carousel/Carousel';
-import { BsCircleFill } from 'react-icons/bs';
 
 //import styled components
 import {Features, Main, Title, Demo} from "@/components/view";
@@ -21,6 +23,7 @@ import img8 from "../public/carousel-images/8.jpg";
 import img9 from "../public/carousel-images/9.jpg";
 import img10 from "../public/carousel-images/10.jpg";
 
+
 const imageItems = [
   <Image className="h-full w-full" src={img1} alt="image1"/>,
   <Image className="h-full w-full" src={img2} alt="image2"/>,
@@ -37,8 +40,10 @@ const navigation = [
 ];
 
 export default function Home() {
+
   return (
   <div className="h-screen overflow-y-scroll">
+    
     <Main>
       
       <Title className="custom-background">

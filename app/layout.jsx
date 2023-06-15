@@ -1,6 +1,10 @@
+"use client"
 import './globals.css'
+import {useEffect} from "react"
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
+import {GA_TRACKING_ID, CA_PUB_NUM} from "../lib/gtag";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,12 +16,33 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
+// }: {
+//   children: React.ReactNode
 }) {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    script.async = true;
+    script.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', GA_TRACKING_ID);
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <html lang="en">
-      <head>
+
+        <head>
         <title>PreForget</title>
         <meta name="title" content={metadata.title} />
         <meta name="description" content={metadata.description} />
@@ -33,6 +58,15 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Analytics />
+        
+        <Script data-ad-client="ca-${CA_PUB_NUM}" async 
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></Script>
+
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}"></Script>
+        {/* <script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          onLoad={handleScriptLoad}
+        /> */}
       </body>
     </html>
   )
