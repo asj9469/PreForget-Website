@@ -1,5 +1,4 @@
 # Check out the website [HERE](https://preforget.vercel.app)
-# If you like this design, feel free to drop a star :))))
 
 ## Home
 <img src="public/readme-sources/home.png">
