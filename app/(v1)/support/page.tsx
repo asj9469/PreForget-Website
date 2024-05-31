@@ -1,28 +1,30 @@
 import React from 'react';
 import Link from "next/link";
-import {NavContainer, LeftSupportContainer, RightSupportContainer, SupportContainer, CenterAlignContainer} from "@/components/view";
+import {NavContainer, LeftSupportContainer, RightSupportContainer, SupportContainer, CenterAlignContainer} from "@/components/v1/view";
 import CopyButton from "@/components/CopyButton";
-import { ToastContainer } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify';
 
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "Download", href: "https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" },
     { name: "Privacy Policy", href: "/privacy-policy" },
   ];
 
 
 export default function SupportPage() {
     return(
-        <div className="h-screen overflow-y-scroll, custom-background">
+        <div className="text-white h-screen overflow-y-scroll, custom-background">
         <NavContainer>
         <div className="z-10 w-full max-w-[100vw] flex items-end justify-end text-sm lg:flex">
         <nav className="mt-16 mr-[10vw] animate-fade-in">
-            <ul className="flex items-center justify-center gap-4">
+            <ul className="text-lg flex items-center justify-center gap-4">
+            <Link className='pr-1' key="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" href="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" target="_blank" rel="noopener noreferrer">
+              Download
+            </Link>
             {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm duration-500 text-zinc-400 hover:text-zinc-300"
+              className="duration-500 text-zinc-400 hover:text-zinc-300"
             >
               {item.name}
             </Link>

@@ -1,12 +1,14 @@
 "use client"
-import './globals.css'
+import '@/app/globals.css'
 import {useEffect} from "react"
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
-import {GA_TRACKING_ID, CA_PUB_NUM} from "../lib/gtag";
+import {GA_TRACKING_ID, CA_PUB_NUM} from "../../lib/gtag";
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
+const noto_sans = Noto_Sans({ subsets: ['latin'], weight: ["300", "400", "500", "600", "700", "800"], })
+
 
 const metadata = {
   title: 'PreForget',
@@ -20,24 +22,24 @@ export default function RootLayout({
 //   children: React.ReactNode
 }) {
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-    script.async = true;
-    script.onload = function () {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', GA_TRACKING_ID);
-    };
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+  //   script.async = true;
+  //   script.onload = function () {
+  //     window.dataLayer = window.dataLayer || [];
+  //     function gtag() {
+  //       window.dataLayer.push(arguments);
+  //     }
+  //     gtag('js', new Date());
+  //     gtag('config', GA_TRACKING_ID);
+  //   };
+  //   document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <html lang="en">

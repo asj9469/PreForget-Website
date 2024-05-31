@@ -1,27 +1,29 @@
 import React from 'react';
 import Link from "next/link";
-import { PrivacyPolicy, NavContainer, PrivacyPolicyMarginStyle} from "@/components/view";
+import { PrivacyPolicy, NavContainer, PrivacyPolicyMarginStyle} from "@/components/v1/view";
 import Script from 'next/script';
 
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "Download", href: "https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" },
     { name: "Support", href: "/support" },
   ];
 
   export default function PrivacyPolicyPage() {
   return (
          
-    <div className="h-screen overflow-y-scroll">
+    <div className="bg-black text-white h-screen overflow-y-scroll">
         <NavContainer>
         <div className="z-10 w-full max-w-[100vw] flex items-end justify-end text-sm lg:flex">
-        <nav className="mt-16 mr-[10vw] animate-fade-in">
+        <nav className="text-lg mt-16 mr-[10vw] animate-fade-in">
             <ul className="flex items-center justify-center gap-4">
+            <Link className='pr-1' key="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" href="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" target="_blank" rel="noopener noreferrer">
+              Download
+            </Link>
             {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm duration-500 text-zinc-400 hover:text-zinc-300"
+              className=" duration-500 text-zinc-400 hover:text-zinc-300"
             >
               {item.name}
             </Link>
@@ -64,7 +66,7 @@ const navigation = [
             <strong>Contact Us</strong>
         </p>
         <p style={{ paddingBottom: '40px' }} className=" text-lg ">
-            If you have any questions or concerns about this Privacy Policy or the privacy practices of PreForget, please contact us at website9469@gmail.com.
+            If you have any questions or concerns about this Privacy Policy or the privacy practices of PreForget, please contact us at preforget@gmail.com.
         </p>
         <p style={{ paddingBottom: '40px', fontStyle: 'italic'}}>
             By using PreForget, you signify your acceptance of this Privacy Policy. If you do not agree with this policy, please refrain from using the app.
