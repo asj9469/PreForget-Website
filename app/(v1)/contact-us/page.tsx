@@ -12,7 +12,7 @@ const navigation = [
 
 export default function SupportPage() {
     return(
-        <div className="text-white h-screen overflow-y-scroll, custom-background">
+        <div className="text-white custom-background">
         <NavContainer>
         <div className="z-10 w-full max-w-[100vw] flex items-end justify-end text-sm lg:flex">
         <nav className="mt-16 mr-[10vw] animate-fade-in">

@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "Support", href: "/support" },
+    { name: "Support", href: "/contact-us" },
   ];
 
   export default function PrivacyPolicyPage() {

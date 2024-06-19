@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>PreForget</title>
+        <title>PreForget v2</title>
       </head>
       <body className={inter.className}>
         {children}

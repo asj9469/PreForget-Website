@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { Button, Typography } from "@material-tailwind/react";
 import { CarouselTransition } from "./NewCarousel";
-
+import { NoSSR } from "next-dynamic-no-ssr";
 
 export default function IntroSection() {
   return (
+    <NoSSR>
     <div className="relative min-h-screen w-full">
-      <header className="grid !min-h-[49rem] bg-[#e3e4e5] px-8">
+      <header className="grid min-h-[49rem] bg-[#e3e4e5] px-8">
         <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
             <div className="text-gray-900 text-6xl font-semibold">
@@ -69,5 +70,6 @@ export default function IntroSection() {
         </div>
       </div>
     </div>
+    </NoSSR>
   );
 }

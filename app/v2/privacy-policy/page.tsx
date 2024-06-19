@@ -4,9 +4,9 @@ import { PrivacyPolicy, NavContainer, PrivacyPolicyMarginStyle} from "@/componen
 import Script from 'next/script';
 
 const navigation = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/v2" },
     { name: "Download", href: "https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" },
-    { name: "Support", href: "/support" },
+    { name: "Contact Us", href: "/v2" },
   ];
 
   export default function PrivacyPolicyPage() {

@@ -3,42 +3,32 @@
 import CA_PUB_NUM from "@/lib/gtag";
 import Image from 'next/image';
 import Link from "next/link";
-import React, {useEffect} from "react";
+import React from "react";
 import Carousel from '@/components/v1/Carousel/Carousel';
+import { DialogDefault } from "@/components/Dialog";
 //import styled components
 import {Features, Main, Title, Demo} from "@/components/v1/view";
 import {CenterAlignContainer2, LeftRightContainerCW, LeftRightContainerCCW, LeftContainer, RightContainer} from "@/components/v1/view";
-import { DialogDefault } from "@/components/Dialog";
 
 //import images/gifs
 import text_logo from "@/public/images/text_logo.png";
 import add_tasks from "@/public/gifs/adding_tasks_cropped.gif";
 import manage_tasks from "@/public/gifs/manage_tasks_cropped.gif";
 
-import img1 from "@/public/carousel-images/1.jpg";
-import img2 from "@/public/carousel-images/2.jpg";
-import img5 from "@/public/carousel-images/5.jpg";
-import img6 from "@/public/carousel-images/6.jpg";
-import img8 from "@/public/carousel-images/8.jpg";
-import img9 from "@/public/carousel-images/9.jpg";
-import img10 from "@/public/carousel-images/10.jpg";
-
-
-
 const imageItems = [
-  <Image className="h-full w-full" src={img1} alt="image1"/>,
-  <Image className="h-full w-full" src={img2} alt="image2"/>,
-  <Image className="h-full w-full" src={img5} alt="image5"/>,
-  <Image className="h-full w-full" src={img6} alt="image6"/>,
-  <Image className="h-full w-full" src={img8} alt="image8"/>,
-  <Image className="h-full w-full" src={img9} alt="image9"/>,
-  <Image className="h-full w-full" src={img10} alt="image10"/>,
+  <Image width="0" height="0" sizes="100vw" className="h-full w-full" src={'/images/carousel-images/1.jpg'} alt="image1"/>,
+  <Image width="0" height="0" sizes="100vw" className="h-full w-full" src={'/images/carousel-images/2.jpg'} alt="image2"/>,
+  <Image width="0" height="0" sizes="100vw" className="h-full w-full" src={'/images/carousel-images/5.jpg'} alt="image5"/>,
+  <Image width="0" height="0" sizes="100vw" className="h-full w-full" src={'/images/carousel-images/6.jpg'} alt="image6"/>,
+  <Image width="0" height="0" sizes="100vw" className="h-full w-full" src={'/images/carousel-images/8.jpg'} alt="image8"/>,
+  <Image width="0" height="0" sizes="100vw" className="h-full w-full" src={'/images/carousel-images/9.jpg'} alt="image9"/>,
+  <Image width="0" height="0" sizes="100vw" className="h-full w-full" src={'/images/carousel-images/10.jpg'} alt="image10"/>,
 ]
 
 const navigation = [
   { name: "PreForget 2.0", href: "/v2"},
   { name: "Privacy Policy", href: "/privacy-policy" },
-	{ name: "Support", href: "/support" },
+	{ name: "Support", href: "/contact-us" },
 ];
 
 export default function Home() {
@@ -168,9 +158,6 @@ export default function Home() {
       </CenterAlignContainer2>
     </section>
   </Demo>
-
-
-
       </Main>
     </div>
   )

@@ -6,21 +6,23 @@ import {
   Button
 } from "@material-tailwind/react";
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions, Transition } from '@headlessui/react'
+import { NoSSR } from "next-dynamic-no-ssr";
 
 import { useState } from 'react'
 
 interface NavItemProps {
-  children: React.ReactNode;
   href: string;
+  title: string;
 }
-function NavItem({ children, href }: NavItemProps) {
+
+const NavItem = ({ href, title }: NavItemProps) => {
   return (
 
     <Link
-      href={""} to={href} spy={true} smooth={true} duration={500} offset={href=="experience" ? (-50) : (-300)}
+      href={""} to={href} spy={true} smooth={true} duration={500} offset={-50}
       className="text-md font-medium text-gray-700 hover:text-gray-500"
     >
-      {children}
+      {title}
     </Link>
   );
 }
@@ -34,24 +36,25 @@ export default function Navbar() {
   const [selectedVersion, setSelectedVersion] = useState(versions[1])
 
   return (
+    <NoSSR>
     <MTNavbar
       fullWidth
       shadow={false}
       blurred={false}
-      className="fixed pt-8 z-50 border-0 bg-[#e1e3e5]"
+      className="fixed pt-8 pb-5 z-10 border-0 bg-[#e1e3e5]"
     >
       <div className="container mx-auto flex items-center justify-between">
 
-      <Listbox value={selectedVersion} onChange={setSelectedVersion}>
+      <Listbox value={selectedVersion}>
         <ListboxButton>
           <div className="font-semibold text-xl text-gray-800 hover:text-gray-600">
             PreForget v2
           </div>
         </ListboxButton>
         <Transition leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0">
-        <ListboxOptions anchor="bottom" className="bg-[#e1e3e5]/40 rounded-lg mt-1">
+        <ListboxOptions anchor="bottom" className="bg-[#e1e3e5] rounded-lg mt-1 z-50">
           {versions.map((version) => (
-            <ListboxOption key={version.id} value={version} className="data-[focus]:bg-[#d9d9d9]/60 py-2 px-5">
+            <ListboxOption key={version.id} value={version} className="bg-[#e1e3e5] data-[focus]:bg-[#d9d9d9]/60 py-2 px-5">
               <a href={version.href} className="text-md text-gray-800">
                 {version.name}
               </a>
@@ -60,13 +63,12 @@ export default function Navbar() {
         </ListboxOptions>
         </Transition>
       </Listbox>
-        
-        
+      
         <ul
           className={`hidden items-center gap-6 lg:flex text-gray-900`}
         >
-          <NavItem href="features">Features</NavItem>
-          <NavItem href="contact">Contact Us</NavItem>
+          <NavItem href="features" title="Features"/>
+          <a href="/v2/contact-us" className="text-md font-medium text-gray-700 hover:text-gray-500"> Contact Us</a>
           <a href="https://ko-fi.com/preforget" target="_blank">
             <Button className="text-white bg-[#a5a5a5] rounded py-2 px-4 text-md" size="sm">
               Support Us
@@ -79,5 +81,6 @@ export default function Navbar() {
         </div> */}
       </div>
     </MTNavbar>
+    </NoSSR>
   );
 }

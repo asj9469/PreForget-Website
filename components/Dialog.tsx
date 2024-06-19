@@ -7,14 +7,17 @@ import {
   DialogFooter,
 } from "@material-tailwind/react";
 import { Inter, Noto_Sans } from 'next/font/google'
+import { NoSSR } from "next-dynamic-no-ssr";
+
 const noto_sans = Noto_Sans({ subsets: ['latin'], weight: ["300", "400", "500", "600", "700", "800"], })
-export function DialogDefault() {
+
+export const DialogDefault = () => {
   const [open, setOpen] = React.useState(true);
  
   const handleOpen = () => setOpen(!open);
  
   return (
-    <>
+    <NoSSR>
       <Dialog open={open} handler={handleOpen} size="xs">
         <DialogHeader className={`flex justify-center items-center ${noto_sans.className}`}> New Version Available</DialogHeader>
         <DialogBody className={`flex justify-center font-semibold ${noto_sans.className} text-[#393939]`}>
@@ -39,6 +42,6 @@ export function DialogDefault() {
         
         </DialogFooter>
       </Dialog>
-    </>
+    </NoSSR>
   );
 }
