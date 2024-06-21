@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from "next/link";
-import { PrivacyPolicy, NavContainer, PrivacyPolicyMarginStyle} from "@/components/view";
-import Script from 'next/script';
+import { PrivacyPolicy, NavContainer, PrivacyPolicyMarginStyle} from "@/components/v1/view";
 
 const navigation = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/v2" },
     { name: "Download", href: "https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" },
-    { name: "Support", href: "/support" },
+    { name: "Contact Us", href: "/v2" },
   ];
 
   export default function PrivacyPolicyPage() {
@@ -21,13 +20,27 @@ const navigation = [
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm duration-500 text-zinc-400 hover:text-zinc-300"
+              className="text-md font-medium text-gray-700 hover:text-gray-500"
             >
               {item.name}
             </Link>
           ))}
-
             </ul>
+
+        {/* <ul
+          className={`hidden items-center gap-6 lg:flex text-gray-900`}
+        >
+          //<NavItem href="features" title="Features"/>
+          <a href="/v2" className="text-md font-medium text-gray-700 hover:text-gray-500"> Home </a>
+          <a href="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" target="_blank" className="text-md font-medium text-gray-700 hover:text-gray-500"> Download </a>
+          <a href="/v2/contact-us" className="text-md font-medium text-gray-700 hover:text-gray-500"> Contact Us</a>
+          <a href="https://ko-fi.com/preforget" target="_blank">
+            <Button className="text-white bg-[#a5a5a5] rounded py-2 px-4 text-md" size="sm">
+              Support Us
+            </Button>
+          </a>
+        </ul> */}
+
         </nav>
         </div>
         </NavContainer>
@@ -64,7 +77,7 @@ const navigation = [
             <strong>Contact Us</strong>
         </p>
         <p style={{ paddingBottom: '40px' }} className=" text-lg ">
-            If you have any questions or concerns about this Privacy Policy or the privacy practices of PreForget, please contact us at website9469@gmail.com.
+            If you have any questions or concerns about this Privacy Policy or the privacy practices of PreForget, please contact us at preforget@gmail.com.
         </p>
         <p style={{ paddingBottom: '40px', fontStyle: 'italic'}}>
             By using PreForget, you signify your acceptance of this Privacy Policy. If you do not agree with this policy, please refrain from using the app.

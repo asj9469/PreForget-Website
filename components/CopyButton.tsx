@@ -24,13 +24,15 @@ export default function CopyButton() {
         <button 
             onClick={handleCopyClick} 
             style={{ display: 'flex', alignItems: 'center', justifyContent:'center' }} 
-            className={"bg-transparent hover:bg-zinc-500 text-white py-3 px-4 rounded-md text-xl sm:text-xl md:text-2xl lg:text-3xl"}
+            // className={"bg-transparent hover:bg-zinc-500 text-white py-3 px-4 rounded-md  sm:text-xl md:text-2xl lg:text-3xl"}
+            className='p-4 pt-3 bg-gray-400 hover:bg-gray-400/30 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100
+            text-xl sm:text-xl md:text-2xl lg:text-3xl'
         >
             
             <span>{isCopied ? 'Copied!' : 'preforget@gmail.com'}</span>
         </button>
 
-        <ToastContainer />
+        <ToastContainer className="text-sm"/>
         </>
     );
 }
