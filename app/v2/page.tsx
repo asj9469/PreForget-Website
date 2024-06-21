@@ -17,16 +17,16 @@ export default function Home_v2 (){
                 Newly Added Features
             </Typography>
             <Feature_Image_Left
-                src={"/gifs/google_gemini_demo.gif"} 
+                src={"/images/new-carousel-images/pic3.png"} 
                 title={"Google Gemini Integration"}
                 subtitle={"Completely free to users!"}
                 text={"The newly integrated AI creates task-related messages to increase interactivity and makes task management less boring."}
             />
             <Feature_Image_Right 
-                src={"/gifs/google_gemini_demo.gif"}
-                title={"Google Gemini Integration"}
-                subtitle={"Completely free to users!"}
-                text={"The newly integrated AI creates task-related messages to increase interactivity and makes task management less boring."}
+                src={"/images/new-carousel-images/pic10-history.png"}
+                title={"Completed Task History"}
+                subtitle={"Keep your completed tasks!"}
+                text={"Users can now easily revisittheir completed tasks in a dedicated window. Simply head to the main screen > click the gear icon > select 'History' (or press cmd+H)."}
             />
             <Footer/>
         </div>

@@ -1,5 +1,5 @@
 "use client";
  
-import { ThemeProvider, Carousel } from "@material-tailwind/react";
+import { ThemeProvider, Carousel, Typography } from "@material-tailwind/react";
  
-export { ThemeProvider, Carousel };
+export { ThemeProvider, Carousel, Typography };

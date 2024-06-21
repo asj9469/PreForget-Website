@@ -67,7 +67,8 @@ export default function Navbar() {
         <ul
           className={`hidden items-center gap-6 lg:flex text-gray-900`}
         >
-          <NavItem href="features" title="Features"/>
+          {/* <NavItem href="features" title="Features"/> */}
+          <a href="https://apps.apple.com/us/app/preforget-menu-bar-to-do-app/id6449631717" target="_blank" className="text-md font-medium text-gray-700 hover:text-gray-500"> Download </a>
           <a href="/v2/contact-us" className="text-md font-medium text-gray-700 hover:text-gray-500"> Contact Us</a>
           <a href="https://ko-fi.com/preforget" target="_blank">
             <Button className="text-white bg-[#a5a5a5] rounded py-2 px-4 text-md" size="sm">

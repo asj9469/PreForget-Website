@@ -3,7 +3,6 @@ import { Carousel } from "@material-tailwind/react";
 import Image from "next/image";
 import type { CarouselProps } from "@material-tailwind/react";
 
- 
 export function CarouselTransition() {
   return (
     <div className="w-full max-w-screen-lg mx-auto">
@@ -24,14 +23,14 @@ export function CarouselTransition() {
                 sizes="100vw"
                 className="w-full h-auto"
             />
-            <Image
+            {/* <Image
                 src="/images/new-carousel-images/pic3.png"
                 alt="metamask"
                 width="0"
                 height="0"
                 sizes="100vw"
                 className="w-full h-auto"
-            />
+            /> */}
             <Image
                 src="/images/new-carousel-images/pic4.png"
                 alt="metamask"

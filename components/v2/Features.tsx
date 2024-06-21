@@ -34,7 +34,9 @@ export function Feature_Image_Left(
           width="0"
           height="0"
           src={src}
-          className="col-span-1 w-1/2 mx-auto lg:w-10/12 h-full"
+          // className="col-span-1 w-1/2 mx-auto lg:w-10/12 h-full"
+          sizes="100vw"
+          className="w-full h-auto"
           alt="feature image"
         />
         {/* <video width="256" height="256" controls preload="none">
@@ -72,19 +74,19 @@ export function Feature_Image_Right(
           
           <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">
             <Typography variant="h2" color="blue-gray" className="mb-4">
-              Google Gemini Integration
+              {title}
             </Typography>
             <Typography
               variant="lead"
               className="mb-5 px-4 text-left  text-xl text-gray-800 lg:px-0  "
             >
-              Completely free to users!
+              {subtitle}
               </Typography>
               <Typography
               variant="lead"
               className="mb-5 px-4 text-left  text-xl text-gray-800 lg:px-0  "
             >
-              The newly integrated AI creates task-related messages to increase interactivity and makes task management less boring.
+              {text}
             </Typography>
             
           </div>
@@ -92,7 +94,9 @@ export function Feature_Image_Right(
             width="0"
             height="0"
             src={src}
-            className="col-span-1 w-1/2 mx-auto lg:w-10/12 h-full"
+            // className="col-span-1 w-1/2 mx-auto lg:w-10/12 h-full"
+            sizes="100vw"
+            className="w-full h-auto"
             alt="feature image"
           />
         </div>

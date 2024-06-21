@@ -5,7 +5,6 @@ import Navbar from '@/components/v2/NavBar'
 import Footer from '@/components/v2/Footer'
 
 export default function ContactUs (){
-    console.log(`Building contact page`)
   return (
     <div className='flex flex-col'>
     <Navbar/>
